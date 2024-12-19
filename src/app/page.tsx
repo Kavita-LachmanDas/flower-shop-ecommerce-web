@@ -108,9 +108,9 @@
 // };
 
 // export default Header;
+'use client'
 
-
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './component/Header'
 import Afterhero from './component/Afterhero'
 import Hero from './component/Hero'
@@ -120,12 +120,20 @@ import Like from './component/Like'
 import Text from './component/Text'
 import Info from './component/Info'
 import Contact from './component/Contact'
+import { Productt } from './types/Productt'
+import ProductDetail from './product/[id]/page'
+import { CartProvider } from './component/CartContext'
 
-export default function page() {
+
+
+
+export default function page({ Component, pageProps }: any) {
+  
   return (
     <>
+    
     <div className='header'>
-      <Header/>
+      <Header cartCount={0}/>
      
   <Hero name='Welcome to Florist' head='Let&apos;s Make Beautiful Flowers' head2='a Part of Your Life.' para1='Explore a vibrant tapestry of blooms and arrangements that add color, fragrance, and elegance to your life.'
   para2='Discover the perfect floral expression for every moment and occasion.' button='Shop Now'/>
@@ -201,6 +209,13 @@ export default function page() {
 </div>
 
 <Contact/>
+
+
+
+
+ 
+  
+   
 
 
     </>
