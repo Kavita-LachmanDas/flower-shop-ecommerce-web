@@ -57,7 +57,7 @@
 // };
 
 import React from "react";
-import { Menu, MenuIcon, ShoppingCart } from "lucide-react";
+import {  MenuIcon, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 

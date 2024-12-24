@@ -49,7 +49,7 @@
 //     </div>
 //   )
 // }
-import { Linkedin } from 'lucide-react';
+
 import Link from 'next/link';
 import React from 'react';
 import { BsArrow90DegUp, BsGithub, BsLinkedin } from 'react-icons/bs';

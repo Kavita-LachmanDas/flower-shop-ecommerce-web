@@ -38,9 +38,9 @@ export default function AboutSection2() {
           </p> 
           <br />
           <p className='text-white text-sm md:text-base'>
-            Our journey began with a seed of passion that blossomed into a flourishing business. Allow us to share the story of our founder's deep-rooted love for flowers and how it led to the creation of your trusted floral destination. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            Our journey began with a seed of passion that blossomed into a flourishing business. Allow us to share the story of our founder&apos;s deep-rooted love for flowers and how it led to the creation of your trusted floral destination. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
             <br /> <br />
-            Explore the tale of dedication, creativity, and a vision to spread the joy of nature&apos;s beauty through the art of floral design. Discover the moments that shaped our founder’s path and paved the way for Florist to become a symbol of floral excellence.
+            Explore the tale of dedication, creativity, and a vision to spread the joy of nature&apos;s beauty through the art of floral design. Discover the moments that shaped our founder&apos;s path and paved the way for Florist to become a symbol of floral excellence.
           </p>
         </div>
 

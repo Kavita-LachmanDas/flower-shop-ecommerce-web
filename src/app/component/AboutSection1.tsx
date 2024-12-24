@@ -1,5 +1,5 @@
 import React from 'react'
-import Text from './Text'
+
 import Header from './Header'
 import AboutLike from './AboutLike'
 import AboutSection2 from './AboutSection2'
@@ -13,7 +13,7 @@ export default function AboutSection1() {
     
 
 <div className="aboutbg">
-<Header/>
+<Header cartCount={0}/>
       <div className=" w-full flex flex-col justify-center content-center relative top-8">
       
       <div className=" justify-center content-center text-center text-white p-4">

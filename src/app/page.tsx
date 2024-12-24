@@ -110,7 +110,7 @@
 // export default Header;
 'use client'
 
-import React, { useState } from 'react'
+
 import Header from './component/Header'
 import Afterhero from './component/Afterhero'
 import Hero from './component/Hero'
@@ -120,14 +120,12 @@ import Like from './component/Like'
 import Text from './component/Text'
 import Info from './component/Info'
 import Contact from './component/Contact'
-import { Productt } from './types/Productt'
-import ProductDetail from './product/[id]/page'
-import { CartProvider } from './component/CartContext'
 
 
 
 
-export default function page({ Component, pageProps }: any) {
+
+export default function page() {
   
   return (
     <>
