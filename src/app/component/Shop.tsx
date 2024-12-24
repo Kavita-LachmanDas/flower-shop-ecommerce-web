@@ -8,7 +8,7 @@ export default function Shop() {
   return (
     <>
     <div className='bg-amber-950 '>
-        <Header/>
+        <Header cartCount={0}/>
        
     </div>
      <br />

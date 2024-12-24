@@ -1,7 +1,15 @@
+import Link from 'next/link';
 import React from 'react'
+interface HeroProps {
+  name: string;
+  head: string;
+  head2: string;
+  para1: string;
+  para2: string;
+  button: string;
+}
 
-
-export default function Hero(props) {
+export default function Hero(props:HeroProps) {
   return (
     <div>
         <div className="w-full text-center">
@@ -10,10 +18,8 @@ export default function Hero(props) {
     <h1 className='leading-[60px] font-bold text-[50px] font-serif'>{props.head} <br />  {props.head2}</h1>  <br />
     <p className='leading-[30px] '>{props.para1} <br />
      {props.para2}</p>
-     {/* <Button variant={'destructive'} className='my-[20px] p-6 w-[150px]'>
-        {props.button}
-     </Button> */}
-     <button className="bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 w-[150px] p-4 rounded-lg my-6 font-bold">{props.button}</button>
+   
+     <Link href="/routes/shop"> <button className="bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 w-[150px] p-4 rounded-lg my-6 font-bold">{props.button}</button></Link>
 </div>
         </div>
     </div>

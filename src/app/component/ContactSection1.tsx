@@ -8,7 +8,7 @@ export default function AboutSection1() {
       
   <div>
   <div className="contact">
-  <Header/>
+  <Header cartCount={0}/>
         <div className=" w-full flex flex-col justify-center content-center relative top-8">
         
         <div className=" justify-center content-center text-center text-white p-4">

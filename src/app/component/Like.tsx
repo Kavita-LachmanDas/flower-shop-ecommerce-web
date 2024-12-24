@@ -1,7 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
-
-export default function AboutLike(props) {
+interface AboutLikeProps {
+  src2: string;
+  height: number;
+  width: number;
+  about: string;
+  heading1: string;
+  heading2: string;
+  para: string;
+  button: string;
+}
+export default function AboutLike(props:AboutLikeProps) {
   return (
     <div>
         <section className="text-gray-600 body-font ">
@@ -19,7 +29,7 @@ export default function AboutLike(props) {
       </h1>
       <p className="mb-8 leading-relaxed">{props.para}</p>
       <div className="flex justify-center">
-        <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">{props.button}</button>
+      <Link href="/routes/shop">   <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded text-lg">{props.button}</button></Link>
        
       </div>
     </div>

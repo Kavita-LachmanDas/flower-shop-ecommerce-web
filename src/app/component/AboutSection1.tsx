@@ -27,12 +27,12 @@ export default function AboutSection1() {
 
 
 
-<AboutLike src1='/img1.jpg' src2='/img2.jpg' width='300' height='300' about='About Florist' heading1='Blossoming Your Special' heading2='Moments with Nature&apos;s Finest' para='Welcome to Florist, where floral artistry meets passion for nature&apos;s beauty. Our story is rooted in a deep love for flowers and a commitment to creating unforgettable moments for our customers.' button='READ MORE' />
+<AboutLike src1='/img1.jpg' src2='/img2.jpg' width={300} height={300} about='About Florist' heading1='Blossoming Your Special' heading2='Moments with Nature&apos;s Finest' para='Welcome to Florist, where floral artistry meets passion for nature&apos;s beauty. Our story is rooted in a deep love for flowers and a commitment to creating unforgettable moments for our customers.' button='READ MORE' />
 
 <AboutSection2/> <br />
 <AboutSection3/>
 <div className="bg-pink-100">
-<Like  src2='/img8.jpg' width='600' height='600' about='SPECIAL OFFER' heading1='Explore Our Exquisite Floral ' heading2='Collections & Shop Now for the Perfect Blooms' button='Shop Now' />
+<Like  src2='/img8.jpg' width={600} height={600} about='SPECIAL OFFER' heading1='Explore Our Exquisite Floral ' heading2='Collections & Shop Now for the Perfect Blooms' button='Shop Now' para={''} />
 </div>
 <Contact/>
 

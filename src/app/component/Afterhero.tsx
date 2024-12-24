@@ -14,8 +14,12 @@
 //   )
 // }
 import React from 'react';
-
-export default function Afterhero(props) {
+interface AfterheroProps {
+  number: string; 
+  order: string;
+  para: string;
+}
+export default function Afterhero(props:AfterheroProps) {
   return (
     <div className="bg-pink-50">
       <div className="p-4 sm:p-6 md:p-8 border-l-2 border-orange-500 m-4 sm:m-6 md:m-8">
