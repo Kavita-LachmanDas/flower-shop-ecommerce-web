@@ -269,7 +269,7 @@
 
 'use client'
 
-import { Productt } from "@/app/types/Productt";
+
 import Image from "next/image";
 import Card1Data from "../Card1Data";
 import Increment from "@/app/component/Increment";
