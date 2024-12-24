@@ -26,7 +26,7 @@ export default function ContactSection3() {
                     before the scheduled delivery date.</p>
             </div>
         </div>
-        <Like  src2='/img8.jpg' width='600' height='600' about='SPECIAL OFFER' heading1='Explore Our Exquisite Floral ' heading2='Collections & Shop Now for the Perfect Blooms' button='Shop Now' />
+        <Like  src2='/img8.jpg' width={600} height={600} about='SPECIAL OFFER' heading1='Explore Our Exquisite Floral ' heading2='Collections & Shop Now for the Perfect Blooms' button='Shop Now' para={''} />
 <Contact/>
         </>
     )
