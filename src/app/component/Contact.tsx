@@ -78,17 +78,17 @@ export default function Contact() {
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-gray-600 hover:text-red-400">
+              <Link href="/routes/about" className="text-gray-600 hover:text-red-400">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-gray-600 hover:text-red-400">
+              <Link href="/routes/shop" className="text-gray-600 hover:text-red-400">
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-gray-600 hover:text-red-400">
+              <Link href="/routes/contact" className="text-gray-600 hover:text-red-400">
                 Contact
               </Link>
             </li>
@@ -106,7 +106,7 @@ export default function Contact() {
           </p>
           <p>
             <a href="tel:+923197946724" className="text-gray-600 hover:text-red-400">
-              Phone: 003197946724
+              Phone: 03197946724
             </a>
           </p>
         </div>
