@@ -53,7 +53,7 @@ export default async function HomePage() {
   // const fetchapi = await fetch("http://localhost:3000/api/productapi");
   const fetchapi = await fetch(`${apiUrl}`);
   const jsonData: { productList: Product[] } = await fetchapi.json(); // Ensure proper typing
-
+ 
   return (
     <div className="flex flex-wrap justify-center">
       {jsonData.productList.map((product) => (
