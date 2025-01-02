@@ -38,6 +38,7 @@ import Link from "next/link";
 import Products from "./Products";
 
 // Define a proper type for the product data
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:3000';
 interface Product {
   id: string;
   img: string;
@@ -49,7 +50,8 @@ interface Product {
 
 export default async function HomePage() {
   // Fetch product data from the API
-  const fetchapi = await fetch("http://localhost:3000/api/productapi");
+  // const fetchapi = await fetch("http://localhost:3000/api/productapi");
+  const fetchapi = await fetch(`${apiUrl}/api/productapi`);
   const jsonData: { productList: Product[] } = await fetchapi.json(); // Ensure proper typing
 
   return (
