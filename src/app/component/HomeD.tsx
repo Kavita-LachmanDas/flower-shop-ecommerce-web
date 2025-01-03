@@ -2,20 +2,20 @@
 // // import { Productt } from "../types/Productt";
 // import Products from "./Products";
 
-import Link from "next/link";
-import Products from "./Products";
-
 // import Link from "next/link";
 // import Products from "./Products";
 
-interface Product {
-  id: string;
-  img: string;
-  name: string;
-  heading: string;
-  del: string;
-  real: string;
-}
+// // import Link from "next/link";
+// // import Products from "./Products";
+
+// interface Product {
+//   id: string;
+//   img: string;
+//   name: string;
+//   heading: string;
+//   del: string;
+//   real: string;
+// }
 // // Sample Product Data
 
 // // home page pr card display krne hai aska data hai yeh
@@ -162,6 +162,19 @@ interface Product {
 //     </div>
 //   );
 // }
+import Link from "next/link";
+import Products from "./Products";
+
+
+
+interface Product {
+  id: string;
+  img: string;
+  name: string;
+  heading: string;
+  del: string;
+  real: string;
+}
 export default async function HomePage() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   
