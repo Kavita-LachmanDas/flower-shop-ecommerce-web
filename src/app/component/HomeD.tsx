@@ -5,6 +5,9 @@
 import Link from "next/link";
 import Products from "./Products";
 
+// import Link from "next/link";
+// import Products from "./Products";
+
 interface Product {
   id: string;
   img: string;
@@ -79,32 +82,124 @@ interface Product {
 //   );
 // }
 
+// export default async function HomePage() {
+// const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+// // console.log("Fetching from:", apiUrl);
+
+// const fetchapi = await fetch(apiUrl || '');
+// if (!fetchapi.ok) {
+//   console.error('API request failed', fetchapi.status);
+//   return <div>Failed to load products</div>;
+// }
+// const contentType = fetchapi.headers.get("Content-Type");
+// if (!contentType || !contentType.includes("application/json")) {
+//   console.error("Expected JSON, but received", contentType);
+//   return <div>Invalid API response</div>;
+// }
+// const jsonData = await fetchapi.json();
+
+
+//   return (
+//     <div className="flex flex-wrap justify-center">
+//       {jsonData.productList.map((product: Product) => (
+//         <div key={product.id} className="flex flex-wrap justify-center">
+//           <Link href={`/product/${product.id}`}>
+//             <Products {...product} />
+//           </Link>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+// import Link from "next/link";
+// import Products from "./Products";
+
+// interface Product {
+//   id: string;
+//   img: string;
+//   name: string;
+//   heading: string;
+//   del: string;
+//   real: string;
+// }
+
+// export default async function HomePage() {
+//   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  
+//   let products = [];
+
+//   try {
+//     const fetchapi = await fetch(apiUrl || '');
+//     if (!fetchapi.ok) {
+//       console.error('API request failed', fetchapi.status);
+//       return <div>Failed to load products</div>;
+//     }
+//     const contentType = fetchapi.headers.get("Content-Type");
+//     if (!contentType || !contentType.includes("application/json")) {
+//       console.error("Expected JSON, but received", contentType);
+//       return <div>Invalid API response</div>;
+//     }
+//     const jsonData = await fetchapi.json();
+//     products = jsonData.productList || [];  // Make sure it's an empty array if no data
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//     products = []; // Fallback to an empty array on error
+//   }
+
+//   return (
+//     <div className="flex flex-wrap justify-center">
+//       {products.length === 0 ? (
+//         <div>Failed to load products</div>
+//       ) : (
+//         products.map((product: Product) => (
+//           <div key={product.id} className="flex flex-wrap justify-center">
+//             <Link href={`/product/${product.id}`}>
+//               <Products {...product} />
+//             </Link>
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// }
 export default async function HomePage() {
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-// console.log("Fetching from:", apiUrl);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  
+  let products = [];
 
-const fetchapi = await fetch(apiUrl || '');
-if (!fetchapi.ok) {
-  console.error('API request failed', fetchapi.status);
-  return <div>Failed to load products</div>;
-}
-const contentType = fetchapi.headers.get("Content-Type");
-if (!contentType || !contentType.includes("application/json")) {
-  console.error("Expected JSON, but received", contentType);
-  return <div>Invalid API response</div>;
-}
-const jsonData = await fetchapi.json();
-
+  try {
+    const fetchapi = await fetch(apiUrl || '');
+    console.log('API Response:', fetchapi); // Log the fetch response
+    if (!fetchapi.ok) {
+      console.error('API request failed', fetchapi.status);
+      return <div>Failed to load products</div>;
+    }
+    const contentType = fetchapi.headers.get("Content-Type");
+    if (!contentType || !contentType.includes("application/json")) {
+      console.error("Expected JSON, but received", contentType);
+      return <div>Invalid API response</div>;
+    }
+    const jsonData = await fetchapi.json();
+    console.log('Parsed JSON:', jsonData); // Log the parsed JSON
+    products = jsonData.productList || [];  // Ensure it's an empty array if no data
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    products = []; // Fallback to an empty array on error
+  }
 
   return (
     <div className="flex flex-wrap justify-center">
-      {jsonData.productList.map((product: Product) => (
-        <div key={product.id} className="flex flex-wrap justify-center">
-          <Link href={`/product/${product.id}`}>
-            <Products {...product} />
-          </Link>
-        </div>
-      ))}
+      {(!products || products.length === 0) ? (
+        <div>Failed to load products</div>
+      ) : (
+        products.map((product: Product) => (
+          <div key={product.id} className="flex flex-wrap justify-center">
+            <Link href={`/product/${product.id}`}>
+              <Products {...product} />
+            </Link>
+          </div>
+        ))
+      )}
     </div>
   );
 }
