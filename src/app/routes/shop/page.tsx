@@ -2,7 +2,8 @@
 
 import Contact from '@/app/component/Contact'
 import Header from '@/app/component/Header'
-import HomeD from '@/app/component/HomeD'
+import HomePage from '@/app/component/HomeD'
+// import HomeD from '@/app/component/HomeD'
 import React from 'react'
 
 export default function page() {
@@ -12,7 +13,8 @@ export default function page() {
       <Header cartCount={0}/>
       </div>
         {/* <Shop/> */}
-        <HomeD/>
+        {/* <HomeD/> */}
+        <HomePage/>
         <Contact/>
     </div>
   )

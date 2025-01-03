@@ -115,11 +115,12 @@ import Header from './component/Header'
 import Afterhero from './component/Afterhero'
 import Hero from './component/Hero'
 import AboutLike from './component/AboutLike'
-import HomeD from './component/HomeD'
+// import HomeD from './component/HomeD'
 import Like from './component/Like'
 import Text from './component/Text'
 import Info from './component/Info'
 import Contact from './component/Contact'
+import HomePage from './component/HomeD'
 
 
 
@@ -174,9 +175,9 @@ export default function page() {
 
 
 
-<HomeD/> 
+{/* <HomeD/>  */}
 
-
+<HomePage/>
 
 
 
