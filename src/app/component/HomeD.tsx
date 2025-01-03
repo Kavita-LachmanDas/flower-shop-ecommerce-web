@@ -81,10 +81,20 @@ interface Product {
 
 export default async function HomePage() {
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-console.log("Fetching from:", apiUrl);
+// console.log("Fetching from:", apiUrl);
 
-  const fetchapi = await fetch(apiUrl || '');
-  const jsonData = await fetchapi.json();
+const fetchapi = await fetch(apiUrl || '');
+if (!fetchapi.ok) {
+  console.error('API request failed', fetchapi.status);
+  return <div>Failed to load products</div>;
+}
+const contentType = fetchapi.headers.get("Content-Type");
+if (!contentType || !contentType.includes("application/json")) {
+  console.error("Expected JSON, but received", contentType);
+  return <div>Invalid API response</div>;
+}
+const jsonData = await fetchapi.json();
+
 
   return (
     <div className="flex flex-wrap justify-center">
