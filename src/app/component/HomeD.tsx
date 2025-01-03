@@ -2,7 +2,14 @@ import Link from "next/link";
 // import { Productt } from "../types/Productt";
 import Products from "./Products";
 
-
+interface Product {
+  id: string;
+  img: string;
+  name: string;
+  heading: string;
+  del: string;
+  real: string;
+}
 // Sample Product Data
 
 // home page pr card display krne hai aska data hai yeh
@@ -20,8 +27,8 @@ export default async function HomePage() {
   const jsonData = await fetchapi.json();
   return (
     <div className="flex flex-wrap justify-center">
-  {jsonData.productList.map((product)=>(
-    <div className="flex flex-wrap justify-center">
+  {jsonData.productList.map((product:Product)=>(
+    <div key={product.id} className="flex flex-wrap justify-center">
       {/* {productsData.map((product) => ( */}
         <Link key={product.id} href={`/product/${product.id}`}>
           <Products {...product} />
